@@ -1,0 +1,2745 @@
+/* ========================================
+   BASIC RESET
+======================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #11100f;
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background-image: url("../images/couple.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    animation: cinematicZoom 15s ease-in-out infinite alternate;
+
+}
+
+
+/* ========================================
+   DARK OVERLAY
+======================================== */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.80));
+
+}
+
+
+/* ========================================
+   HERO CONTENT
+======================================== */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 30px;
+
+    animation: heroReveal 1.8s ease forwards;
+
+}
+
+
+.eyebrow {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(70px, 20vw, 110px);
+
+    font-weight: 400;
+
+    line-height: 0.8;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    font-size: 42px;
+
+    margin: 18px 0;
+
+    font-style: italic;
+
+}
+
+
+.wedding-date {
+
+    margin-top: 35px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+}
+
+
+/* ========================================
+   OPEN INVITATION BUTTON
+======================================== */
+
+.open-btn {
+
+    margin-top: 45px;
+
+    padding: 16px 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    background: transparent;
+
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.4s ease;
+
+}
+
+
+.open-btn:hover {
+
+    background: white;
+
+    color: #11100f;
+
+}
+
+
+/* ========================================
+   SCROLL INDICATOR
+======================================== */
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+
+.scroll-indicator span {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    opacity: 0.7;
+
+}
+
+
+.scroll-line {
+
+    width: 1px;
+
+    height: 45px;
+
+    background: white;
+
+    animation: scrollLine 2s infinite;
+
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes heroReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+@keyframes scrollLine {
+
+    0% {
+
+        transform: scaleY(0);
+
+        transform-origin: top;
+
+    }
+
+    50% {
+
+        transform: scaleY(1);
+
+        transform-origin: top;
+
+    }
+
+    51% {
+
+        transform: scaleY(1);
+
+        transform-origin: bottom;
+
+    }
+
+    100% {
+
+        transform: scaleY(0);
+
+        transform-origin: bottom;
+
+    }
+
+}
+
+/* ========================================
+   CINEMATIC OPENING SCREEN
+======================================== */
+
+.opening-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #11100f;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+
+}
+
+
+/* ========================================
+   OPENING CONTENT
+======================================== */
+
+.opening-content {
+
+    padding: 30px;
+
+    animation: openingReveal 2s ease forwards;
+
+}
+
+
+/* Small introductory text */
+
+.opening-small {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #cdbb9d;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Couple names */
+
+.opening-names {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(70px, 20vw, 110px);
+
+    font-weight: 400;
+
+    line-height: 0.75;
+
+}
+
+
+.opening-names span {
+
+    display: block;
+
+    font-size: 40px;
+
+    font-style: italic;
+
+    margin: 18px 0;
+
+}
+
+
+/* Wedding date */
+
+.opening-date {
+
+    margin-top: 35px;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #d8d0c5;
+
+}
+
+
+/* ========================================
+   OPENING BUTTON
+======================================== */
+
+.opening-button {
+
+    margin-top: 45px;
+
+    padding: 16px 32px;
+
+    background: transparent;
+
+    border: 1px solid #cdbb9d;
+
+    color: #f5efe6;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+
+}
+
+
+.opening-button:hover {
+
+    background: #cdbb9d;
+
+    color: #11100f;
+
+}
+
+
+/* ========================================
+   OPENING EXIT ANIMATION
+======================================== */
+
+.opening-screen.hide {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+/* ========================================
+   OPENING CONTENT ANIMATION
+======================================== */
+
+@keyframes openingReveal {
+
+    0% {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ========================================
+   CINEMATIC PHOTO ZOOM
+======================================== */
+
+@keyframes cinematicZoom {
+
+    from {
+
+        background-size: 100%;
+
+    }
+
+    to {
+
+        background-size: 110%;
+
+    }
+
+}
+
+/* ========================================
+   STORY SECTION
+======================================== */
+
+.story-section {
+
+    min-height: 100svh;
+
+    padding: 100px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #171513;
+
+}
+
+
+.story-container {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+
+}
+
+
+/* ========================================
+   SECTION LABEL
+======================================== */
+
+.section-label {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color: #cdbb9d;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ========================================
+   STORY TITLE
+======================================== */
+
+.story-title {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(45px, 13vw, 65px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    margin-bottom: 40px;
+
+}
+
+
+/* ========================================
+   STORY IMAGE
+======================================== */
+
+.story-image {
+
+    width: 100%;
+
+    height: 420px;
+
+    overflow: hidden;
+
+    margin-bottom: 35px;
+
+}
+
+
+.story-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 1.5s ease;
+
+}
+
+
+/* Slight zoom when revealed */
+
+.story-image.revealed img {
+
+    transform: scale(1.04);
+
+}
+
+
+/* ========================================
+   STORY TEXT
+======================================== */
+
+.story-text {
+
+    font-size: 13px;
+
+    line-height: 2;
+
+    color: #cfc8bf;
+
+    max-width: 420px;
+
+    margin: auto;
+
+}
+
+/* ========================================
+   SCROLL REVEAL ANIMATION
+======================================== */
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s ease;
+
+}
+
+
+/* Element becomes visible */
+
+.reveal.revealed {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* ========================================
+   SLIDE FROM LEFT
+======================================== */
+
+.reveal-left {
+
+    opacity: 0;
+
+    transform: translateX(-60px);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s ease;
+
+}
+
+
+.reveal-left.revealed {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+/* ========================================
+   SLIDE FROM RIGHT
+======================================== */
+
+.reveal-right {
+
+    opacity: 0;
+
+    transform: translateX(60px);
+
+    transition:
+
+        opacity 1s ease,
+
+        transform 1s ease;
+
+}
+
+
+.reveal-right.revealed {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+.story-container .section-label {
+    transition-delay: 0.1s;
+}
+
+.story-container .story-title {
+    transition-delay: 0.25s;
+}
+
+.story-container .story-image {
+    transition-delay: 0.4s;
+}
+
+.story-container .story-text {
+    transition-delay: 0.6s;
+}
+
+/* ========================================
+   WEDDING TIMELINE
+======================================== */
+
+.timeline-section {
+
+    min-height: 100svh;
+
+    padding: 110px 25px;
+
+    background: #0f0e0d;
+
+}
+
+
+.timeline-container {
+
+    width: 100%;
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+/* ========================================
+   TIMELINE HEADING
+======================================== */
+
+.timeline-heading {
+
+    text-align: center;
+
+    margin-bottom: 80px;
+
+}
+
+
+.timeline-title {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(48px, 13vw, 68px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+
+}
+
+
+.timeline-intro {
+
+    max-width: 350px;
+
+    margin: auto;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+
+    color: #bdb6ad;
+
+}
+
+/* ========================================
+   TIMELINE STRUCTURE
+======================================== */
+
+.timeline {
+
+    position: relative;
+
+    width: 100%;
+
+    padding-bottom: 50px;
+
+}
+
+
+/* Main timeline line */
+
+.timeline-line {
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 1px;
+
+    background: rgba(205, 187, 157, 0.2);
+
+    transform: translateX(-50%);
+
+}
+
+
+/* Animated progress line */
+
+.timeline-progress {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 0%;
+
+    background: #cdbb9d;
+
+    transition: height 0.2s linear;
+
+}
+
+/* ========================================
+   TIMELINE EVENTS
+======================================== */
+
+.timeline-event {
+
+    position: relative;
+
+    width: 50%;
+
+    padding: 20px 15px 100px;
+
+}
+
+
+.timeline-left {
+
+    left: 0;
+
+    text-align: right;
+
+    padding-right: 35px;
+
+}
+
+
+.timeline-right {
+
+    left: 50%;
+
+    text-align: left;
+
+    padding-left: 35px;
+
+}
+
+
+/* ========================================
+   TIMELINE DOT
+======================================== */
+
+.timeline-dot {
+
+    position: absolute;
+
+    top: 25px;
+
+    width: 11px;
+
+    height: 11px;
+
+    border: 1px solid #cdbb9d;
+
+    background: #0f0e0d;
+
+    border-radius: 50%;
+
+    z-index: 2;
+
+}
+
+
+.timeline-left .timeline-dot {
+
+    right: -6px;
+
+}
+
+
+.timeline-right .timeline-dot {
+
+    left: -5px;
+
+}
+
+/* ========================================
+   EVENT CARD
+======================================== */
+
+.event-card {
+
+    padding: 30px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    transition:
+
+        transform 0.5s ease,
+
+        border-color 0.5s ease;
+
+}
+
+
+.event-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: rgba(205, 187, 157, 0.5);
+
+}
+
+
+.event-number {
+
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+
+    color: #cdbb9d;
+
+    margin-bottom: 15px;
+
+}
+
+
+.event-type {
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+
+    color: #cdbb9d;
+
+    margin-bottom: 15px;
+
+}
+
+
+.event-card h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 29px;
+
+    font-weight: 400;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+
+}
+
+
+.event-date {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #e5ded4;
+
+    margin-bottom: 8px;
+
+}
+
+
+.event-location {
+
+    font-size: 11px;
+
+    color: #aaa39a;
+
+}
+
+/* ========================================
+   MOBILE TIMELINE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .timeline-event {
+
+        width: 100%;
+
+        left: 0;
+
+        padding-left: 45px;
+
+        padding-right: 0;
+
+        text-align: left;
+
+        padding-bottom: 90px;
+
+    }
+
+
+    .timeline-left,
+    .timeline-right {
+
+        left: 0;
+
+        padding-left: 45px;
+
+        padding-right: 0;
+
+        text-align: left;
+
+    }
+
+
+    .timeline-line {
+
+        left: 15px;
+
+    }
+
+
+    .timeline-left .timeline-dot,
+    .timeline-right .timeline-dot {
+
+        left: 10px;
+
+        right: auto;
+
+    }
+
+
+    .event-card {
+
+        width: 100%;
+
+    }
+
+}
+
+/* =========================
+   COUNTDOWN SECTION
+========================= */
+
+.countdown-section {
+    min-height: 100svh;
+    padding: 120px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3eee7;
+    color: #171513;
+}
+
+.countdown-container {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+}
+
+.countdown-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 13vw, 76px);
+    font-weight: 400;
+    line-height: 0.9;
+    margin-bottom: 25px;
+}
+
+.countdown-date {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #7d746a;
+    margin-bottom: 50px;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.countdown-box {
+    padding: 25px 10px;
+    border: 1px solid rgba(23, 21, 19, 0.15);
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.countdown-box span {
+    display: block;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(38px, 10vw, 60px);
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.countdown-box small {
+    display: block;
+    font-size: 8px;
+    letter-spacing: 2px;
+    color: #82786d;
+}
+
+.countdown-message {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-style: italic;
+    color: #756c63;
+}
+
+
+/* Countdown number animation */
+
+.countdown-box span.tick {
+    animation: countdownTick 0.35s ease;
+}
+
+@keyframes countdownTick {
+
+    0% {
+        opacity: 0.3;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Mobile countdown */
+
+@media (max-width: 600px) {
+
+    .countdown-section {
+        min-height: 100svh;
+        padding: 100px 20px;
+    }
+
+    .countdown-title {
+        font-size: clamp(48px, 14vw, 64px);
+    }
+
+    .countdown-date {
+        margin-bottom: 40px;
+    }
+
+    .countdown {
+        gap: 6px;
+    }
+
+    .countdown-box {
+        padding: 20px 5px;
+    }
+
+    .countdown-box span {
+        font-size: clamp(32px, 10vw, 45px);
+    }
+
+    .countdown-box small {
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+    .countdown-message {
+        font-size: 20px;
+    }
+
+}
+
+/* =========================
+   EVENT DETAILS
+========================= */
+
+.details-section {
+    min-height: 100svh;
+    padding: 120px 25px;
+    background: #0f0e0d;
+    color: #f3eee7;
+}
+
+.details-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.details-heading {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.details-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 13vw, 76px);
+    font-weight: 400;
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.details-intro {
+    max-width: 380px;
+    margin: auto;
+    font-size: 12px;
+    line-height: 1.9;
+    color: #aaa39a;
+}
+
+
+/* =========================
+   EVENT CARD
+========================= */
+
+.event-detail-card {
+    position: relative;
+    margin-bottom: 35px;
+    padding: 35px 25px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.025);
+    overflow: hidden;
+
+    transition:
+        transform 0.6s ease,
+        border-color 0.6s ease;
+}
+
+.event-detail-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(205, 187, 157, 0.5);
+}
+
+
+/* subtle background glow */
+
+.event-detail-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    top: -90px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background: rgba(205, 187, 157, 0.05);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CARD HEADER
+========================= */
+
+.event-detail-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-number {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    color: #cdbb9d;
+}
+
+.detail-label {
+    font-size: 8px;
+    letter-spacing: 3px;
+    color: #cdbb9d;
+}
+
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.event-detail-content h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   INFORMATION ROWS
+========================= */
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.detail-row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.detail-icon {
+    min-width: 45px;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+
+    color: #cdbb9d;
+
+    padding-top: 4px;
+}
+
+.detail-row strong {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 21px;
+    font-weight: 400;
+
+    margin-bottom: 4px;
+}
+
+.detail-row p {
+    font-size: 10px;
+    color: #8f8981;
+}
+
+
+/* =========================
+   LOCATION BUTTON
+========================= */
+
+.location-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-top: 40px;
+    padding: 14px 20px;
+
+    border: 1px solid rgba(205, 187, 157, 0.5);
+
+    color: #cdbb9d;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+.location-button span {
+    font-size: 14px;
+}
+
+.location-button:hover {
+    background: #cdbb9d;
+    color: #0f0e0d;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .details-section {
+        padding: 100px 20px;
+    }
+
+    .details-heading {
+        margin-bottom: 60px;
+    }
+
+    .details-title {
+        font-size: clamp(48px, 14vw, 65px);
+    }
+
+    .event-detail-card {
+        padding: 30px 20px;
+    }
+
+    .event-detail-content h3 {
+        font-size: 36px;
+    }
+
+    .detail-row {
+        gap: 15px;
+    }
+
+}
+
+/* =========================
+   PHOTO GALLERY
+========================= */
+
+.gallery-section {
+
+    min-height: 100svh;
+
+    padding: 120px 25px;
+
+    background: #1F1F1F;
+
+    color: #ffffff;
+
+}
+
+.gallery-container {
+
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================
+   GALLERY HEADING
+========================= */
+
+.gallery-heading {
+    text-align: center;
+    margin-bottom: 90px;
+}
+
+.gallery-title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(50px, 13vw, 78px);
+    font-weight: 400;
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.gallery-intro {
+    max-width: 350px;
+    margin: auto;
+
+    font-size: 12px;
+    line-height: 1.9;
+
+    color: #756d64;
+}
+
+
+/* =========================
+   GALLERY LAYOUT
+========================= */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.gallery-item {
+    position: relative;
+}
+
+.gallery-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #ddd5ca;
+}
+
+
+/* =========================
+   IMAGE SIZES
+========================= */
+
+.gallery-large {
+    width: 90%;
+    margin-left: auto;
+}
+
+.gallery-large .gallery-image {
+    aspect-ratio: 3 / 4;
+}
+
+
+.gallery-small {
+    width: 62%;
+}
+
+.gallery-small .gallery-image {
+    aspect-ratio: 4 / 5;
+}
+
+
+.gallery-medium {
+    width: 78%;
+    margin-left: auto;
+}
+
+.gallery-medium .gallery-image {
+    aspect-ratio: 3 / 4;
+}
+
+
+.gallery-wide {
+    width: 100%;
+}
+
+.gallery-wide .gallery-image {
+    aspect-ratio: 4 / 3;
+}
+
+
+.gallery-medium:nth-of-type(5) {
+    width: 72%;
+}
+
+
+.gallery-small:nth-of-type(6) {
+    width: 65%;
+    margin-left: auto;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.gallery-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.08);
+
+    transition:
+        transform 1.4s cubic-bezier(0.16,
+            1,
+            0.3,
+            1);
+}
+
+.gallery-item.revealed .gallery-image img {
+    transform: scale(1);
+}
+
+.gallery-image {
+    overflow: hidden;
+}
+
+.gallery-item:hover .gallery-image img {
+    transform: scale(1.04);
+}
+
+
+/* subtle zoom on hover */
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .gallery-section {
+        padding: 100px 20px;
+    }
+
+    .gallery-heading {
+        margin-bottom: 70px;
+    }
+
+    .gallery-title {
+        font-size: clamp(48px, 14vw, 65px);
+    }
+
+    .gallery {
+        gap: 55px;
+    }
+
+    .gallery-large {
+        width: 94%;
+    }
+
+    .gallery-small {
+        width: 72%;
+    }
+
+    .gallery-medium {
+        width: 84%;
+    }
+
+    .gallery-wide {
+        width: 100%;
+    }
+
+    .gallery-medium:nth-of-type(5) {
+        width: 80%;
+    }
+
+    .gallery-small:nth-of-type(6) {
+        width: 72%;
+    }
+
+}
+
+/* =========================
+   FULLSCREEN PHOTO VIEWER
+========================= */
+
+.photo-viewer {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(10, 9, 8, 0.97);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease;
+}
+
+
+.photo-viewer.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   VIEWER IMAGE
+========================= */
+
+.viewer-image-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.viewer-image-container img {
+    max-width: 90%;
+    max-height: 85%;
+
+    object-fit: contain;
+
+    opacity: 0;
+    transform: scale(0.94);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.6s ease;
+}
+
+
+.photo-viewer.active .viewer-image-container img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.viewer-close {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 2;
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #f3eee7;
+
+    font-size: 28px;
+    font-weight: 200;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.viewer-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: rotate(90deg);
+}
+
+
+/* =========================
+   NAVIGATION BUTTONS
+========================= */
+
+.viewer-prev,
+.viewer-next {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 2;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #f3eee7;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 35px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.viewer-prev {
+    left: 20px;
+}
+
+
+.viewer-next {
+    right: 20px;
+}
+
+
+.viewer-prev:hover {
+    background: rgba(255, 255, 255, 0.15);
+
+    transform:
+        translateY(-50%) translateX(-3px);
+}
+
+
+.viewer-next:hover {
+    background: rgba(255, 255, 255, 0.15);
+
+    transform:
+        translateY(-50%) translateX(3px);
+}
+
+
+/* =========================
+   PHOTO COUNTER
+========================= */
+
+.viewer-counter {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #cdbb9d;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .photo-viewer {
+        padding: 15px;
+    }
+
+    .viewer-image-container img {
+        max-width: 94%;
+        max-height: 78%;
+    }
+
+    .viewer-close {
+        top: 15px;
+        right: 15px;
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 24px;
+    }
+
+    .viewer-prev,
+    .viewer-next {
+        width: 38px;
+        height: 38px;
+
+        font-size: 30px;
+    }
+
+    .viewer-prev {
+        left: 10px;
+    }
+
+    .viewer-next {
+        right: 10px;
+    }
+
+    .viewer-counter {
+        bottom: 18px;
+    }
+
+}
+
+/* =========================
+   MUSIC CONTROL
+========================= */
+
+.music-control {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 9000;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 11px 15px;
+
+    border: 1px solid rgba(205, 187, 157, 0.5);
+
+    background: rgba(15, 14, 13, 0.85);
+
+    backdrop-filter: blur(10px);
+
+    color: #cdbb9d;
+
+    cursor: pointer;
+
+    font-family: "Montserrat", sans-serif;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.music-control:hover {
+    background: rgba(205, 187, 157, 0.15);
+
+    border-color: #cdbb9d;
+
+    transform: translateY(-2px);
+}
+
+
+/* music symbol */
+
+.music-icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1;
+}
+
+
+/* text */
+
+.music-text {
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+/* playing animation */
+
+.music-control.playing .music-icon {
+    animation: musicPulse 1.2s ease-in-out infinite;
+}
+
+
+@keyframes musicPulse {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* mobile */
+
+@media (max-width: 600px) {
+
+    .music-control {
+        right: 15px;
+        bottom: 15px;
+
+        padding: 10px 13px;
+    }
+
+    .music-text {
+        font-size: 6px;
+    }
+
+}
+
+/* ========================================
+   RSVP SECTION
+======================================== */
+
+.rsvp-section {
+    position: relative;
+    padding: 120px 24px;
+    background: #0f0e0d;
+    color: #f4efe7;
+    overflow: hidden;
+}
+
+.rsvp-container {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.rsvp-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.rsvp-title {
+    margin: 20px 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(42px, 10vw, 72px);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -1px;
+}
+
+.rsvp-intro {
+    max-width: 420px;
+    margin: 25px auto 0;
+    color: rgba(244, 239, 231, 0.65);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.rsvp-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 32px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    color: #cdbb9d;
+    font-family: "Montserrat", sans-serif;
+    font-size: 8px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.form-group label span {
+    color: rgba(205, 187, 157, 0.5);
+    font-size: 7px;
+}
+
+.form-group input[type="text"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 17px 16px;
+    border: 1px solid rgba(205, 187, 157, 0.25);
+    border-radius: 0;
+    outline: none;
+    background: rgba(255, 255, 255, 0.03);
+    color: #f4efe7;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #cdbb9d;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(244, 239, 231, 0.3);
+}
+
+.form-group select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.form-group select option {
+    background: #0f0e0d;
+    color: #f4efe7;
+}
+
+.attendance-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.attendance-option {
+    position: relative;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    min-height: 55px;
+    margin: 0 !important;
+    padding: 14px;
+    border: 1px solid rgba(205, 187, 157, 0.25);
+    color: rgba(244, 239, 231, 0.7) !important;
+    font-size: 9px !important;
+    letter-spacing: 1px !important;
+    cursor: pointer;
+    text-align: center;
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.attendance-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.attendance-option:has(input:checked) {
+    border-color: #cdbb9d;
+    background: rgba(205, 187, 157, 0.1);
+    color: #cdbb9d !important;
+}
+
+.rsvp-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+    padding: 18px 20px;
+    border: 1px solid #cdbb9d;
+    background: #cdbb9d;
+    color: #0f0e0d;
+    font-family: "Montserrat", sans-serif;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.rsvp-button span {
+    font-size: 16px;
+}
+
+.rsvp-button:hover {
+    background: transparent;
+    color: #cdbb9d;
+    transform: translateY(-2px);
+}
+
+.rsvp-success {
+    display: none;
+    text-align: center;
+    padding: 60px 25px;
+    border: 1px solid rgba(205, 187, 157, 0.25);
+}
+
+.rsvp-success.show {
+    display: block;
+    animation: successReveal 0.8s ease forwards;
+}
+
+.success-mark {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    border: 1px solid #cdbb9d;
+    border-radius: 50%;
+    color: #cdbb9d;
+    font-size: 24px;
+}
+
+.rsvp-success h3 {
+    margin-bottom: 15px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 400;
+}
+
+.rsvp-success p {
+    max-width: 380px;
+    margin: 0 auto;
+    color: rgba(244, 239, 231, 0.65);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+@keyframes successReveal {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .rsvp-section {
+        padding: 100px 20px;
+    }
+
+    .rsvp-heading {
+        margin-bottom: 50px;
+    }
+
+    .attendance-options {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ========================================
+   CLOSING SECTION
+======================================== */
+
+.closing-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #0f0e0d;
+}
+
+.closing-image {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        url("../images/photo16.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    transform: scale(1.05);
+
+    animation:
+        closingZoom 18s ease-in-out infinite alternate;
+}
+
+.closing-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(to bottom,
+            rgba(15, 14, 13, 0.35),
+            rgba(15, 14, 13, 0.75));
+}
+
+.closing-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 700px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+}
+
+.closing-title {
+    margin: 25px 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(45px, 11vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 0.95;
+
+    color: #f4efe7;
+
+    letter-spacing: -1px;
+}
+
+.closing-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 35px auto;
+}
+
+.closing-divider span {
+    width: 55px;
+    height: 1px;
+
+    background:
+        rgba(205, 187, 157, 0.55);
+}
+
+.closing-divider i {
+    color: #cdbb9d;
+
+    font-size: 13px;
+
+    font-style: normal;
+}
+
+.closing-names {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(34px, 8vw, 52px);
+
+    font-weight: 400;
+
+    color: #f4efe7;
+}
+
+.closing-names span {
+    color: #cdbb9d;
+
+    font-style: italic;
+}
+
+.closing-date {
+    margin-top: 15px;
+
+    color:
+        rgba(244, 239, 231, 0.7);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+@keyframes closingZoom {
+
+    from {
+        transform: scale(1.05);
+    }
+
+    to {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+    padding: 70px 25px 50px;
+
+    background: #0f0e0d;
+
+    color: #f4efe7;
+
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 500px;
+
+    margin: 0 auto;
+}
+
+.footer-names {
+    margin: 0;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+}
+
+.footer-text {
+    margin-top: 12px;
+
+    color: #cdbb9d;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+}
+
+.footer-divider {
+    width: 45px;
+    height: 1px;
+
+    margin: 30px auto;
+
+    background:
+        rgba(205, 187, 157, 0.4);
+}
+
+.footer-copy {
+    margin: 0;
+
+    color:
+        rgba(244, 239, 231, 0.4);
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+/* ========================================
+   BACK TO TOP
+======================================== */
+
+.back-to-top {
+    position: fixed;
+
+    right: 20px;
+    bottom: 75px;
+
+    z-index: 8999;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(205, 187, 157, 0.45);
+
+    background:
+        rgba(15, 14, 13, 0.8);
+
+    backdrop-filter: blur(10px);
+
+    color: #cdbb9d;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background:
+        rgba(205, 187, 157, 0.12);
+
+    transform:
+        translateY(-2px);
+}
+
+@media (max-width: 600px) {
+
+    .back-to-top {
+        right: 15px;
+        bottom: 70px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .story-section,
+    .timeline-section,
+    .countdown-section,
+    .details-section,
+    .gallery-section {
+        overflow: hidden;
+    }
+
+    .section-label {
+        letter-spacing: 3px;
+    }
+
+    .story-text,
+    .gallery-intro,
+    .details-intro,
+    .countdown-message,
+    .rsvp-intro {
+        max-width: 340px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
+
+/* ========================================
+   CINEMATIC HERO ENHANCEMENT
+======================================== */
+
+.hero-content {
+    animation:
+        heroContentReveal 1.8s ease-out both;
+}
+
+@keyframes heroContentReveal {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* ========================================
+   AMBIENT LIGHT
+======================================== */
+
+.story-section,
+.details-section,
+.rsvp-section {
+    position: relative;
+}
+
+.story-section::before,
+.details-section::before,
+.rsvp-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(205, 187, 157, 0.06);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+
+    animation:
+        ambientFloat 8s ease-in-out infinite alternate;
+}
+
+.story-section::before {
+    top: 15%;
+    right: -150px;
+}
+
+.details-section::before {
+    top: 50%;
+    left: -150px;
+}
+
+.rsvp-section::before {
+    bottom: 10%;
+    right: -150px;
+}
+
+@keyframes ambientFloat {
+
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+
+}
+
+/* ========================================
+   RSVP EVENT OPTIONS
+======================================== */
+
+.event-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.event-option {
+    position: relative;
+
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 75px;
+
+    padding: 15px;
+
+    margin: 0 !important;
+
+    border: 1px solid rgba(205, 187, 157, 0.25);
+
+    color:
+        rgba(244, 239, 231, 0.7) !important;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.event-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.event-option span {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+.event-option small {
+    color:
+        rgba(244, 239, 231, 0.4);
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+}
+
+.event-option:has(input:checked) {
+    border-color: #cdbb9d;
+
+    background:
+        rgba(205, 187, 157, 0.1);
+
+    color: #cdbb9d !important;
+}
+
+.event-option:has(input:checked) small {
+    color:
+        rgba(205, 187, 157, 0.7);
+}
+
+@media (max-width: 600px) {
+
+    .event-options {
+        grid-template-columns: 1fr;
+    }
+
+}
